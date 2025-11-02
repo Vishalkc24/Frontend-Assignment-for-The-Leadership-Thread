@@ -1,0 +1,89 @@
+:root{
+  --form-bg: #2B414F;
+  --page-bg: #F5F5F5;
+  --heading-color: #FFFFFF;
+  --label-color: #C6B98B;
+  --input-text: #999999;
+  --submit-bg: #295BFF;
+  --card-radius: 8px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--page-bg);
+  color:var(--input-text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.top-header{background:#ffffff;padding:16px 24px;box-shadow:0 1px 0 rgba(0,0,0,0.06)}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand img{height:56px;max-height:56px}
+.top-header{background:#ffffff;padding:16px 24px;box-shadow:0 1px 0 rgba(0,0,0,0.06);min-height:72px}
+.header-title{flex:1;font-weight:600;font-size:16px;color:#263238}
+.user-box{display:flex;align-items:center;gap:10px}
+.user-box .avatar{height:36px;width:36px;border-radius:50%;object-fit:cover}
+.user-name{font-size:14px;color:#333}
+.dental-icon{height:36px;width:36px;object-fit:contain;margin-left:8px}
+
+.page-wrap{display:block;padding:24px}
+.form-card{width:100%;background:transparent}
+
+.profile-form{background:var(--form-bg);border-radius:var(--card-radius);padding:36px 48px;color:var(--input-text);box-shadow:none;width:100%;max-width:none}
+.form-heading{color:var(--heading-color);font-size:24px;margin:0 0 24px;font-weight:700}
+.section-label{display:block;color:var(--label-color);font-weight:500;font-size:14px;margin-bottom:8px}
+
+.grid{display:grid;gap:28px}
+.two-col{grid-template-columns:1fr 1fr}
+.form-group{display:flex;flex-direction:column}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select{
+  height:40px;padding:12px 16px;border-radius:6px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.02);color:var(--input-text);font-size:14px;outline:none;appearance:none;width:100%
+}
+.form-group input::placeholder{color:var(--input-text)}
+.form-section{margin-bottom:28px}
+.producer-row{margin-top:12px}
+.producer{display:flex;align-items:center;gap:12px;color:var(--label-color);font-weight:500}
+.producer input{width:18px;height:18px;transform:translateY(1px)}
+
+.form-actions{display:flex;justify-content:flex-end;gap:16px;margin-top:32px}
+.btn{height:40px;padding:0 18px;border-radius:6px;font-size:14px;cursor:pointer;border:none}
+.btn-cancel{background:transparent;border:1px solid rgba(255,255,255,0.6);color:#FFFFFF}
+.btn-submit{background:var(--submit-bg);color:#FFFFFF}
+
+/* ensure buttons keep consistent width on mobile */
+.btn{min-width:88px}
+
+/* Accessibility helpers */
+.sr-label{font-size:14px;color:var(--label-color);display:block;margin-bottom:6px}
+
+/* ensure label text sits above its control and add spacing */
+.sr-label input,
+.sr-label select{
+  display:block;
+  margin-top:8px;
+}
+
+/* Mobile layout */
+@media (max-width: 920px){
+  .page-wrap{padding:12px}
+  .profile-form{padding:24px}
+  .two-col{grid-template-columns:1fr}
+  .form-heading{font-size:20px}
+  .form-card{max-width:420px}
+  .header-title{display:none}
+  .user-name{display:none}
+}
+
+@media (max-width: 420px){
+  .profile-form{padding:18px}
+  .brand img{height:40px}
+  .btn{min-width:72px}
+}
+
+/* Prevent horizontal scroll */
+html,body{overflow-x:hidden}

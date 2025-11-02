@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create Your Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="the_leadership_thread_logo.png" alt="The Leadership Thread logo">
+      </div>
+      <div class="user-box">
+        <img src="person.png" alt="User avatar" class="avatar">
+        <span class="user-name">Dr. John Doe</span>
+        <img src="dental.png" alt="dental" class="dental-icon">
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="form-card">
+      <form class="profile-form" novalidate>
+        <h1 class="form-heading">Create Your Profile</h1>
+
+        <div class="form-section">
+          <label class="section-label">Your Name</label>
+          <div class="grid two-col">
+            <div class="form-group">
+              <label class="sr-label">First Name
+                <input type="text" name="firstName" placeholder="First Name">
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="sr-label">Last Name
+                <input type="text" name="lastName" placeholder="Last Name">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="section-label">Contact Details</label>
+          <div class="grid two-col">
+            <div class="form-group">
+              <label class="sr-label">Email
+                <input type="email" name="email" placeholder="Email">
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="sr-label">Mobile No
+                <input type="tel" name="mobile" placeholder="Mobile No">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="section-label">Select Primary Role</label>
+          <div class="grid two-col">
+            <div class="form-group">
+              <label class="sr-label">Role
+                <select name="role">
+                  <option>Specialist (Partner)</option>
+                  <option>Owner</option>
+                  <option>Partner</option>
+                  <option>Associate</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="sr-label">Specialty Type
+                <select name="specialty">
+                  <option>Select</option>
+                  <option>Periodontist</option>
+                  <option>Endodontist</option>
+                  <option>Oral Surgeon</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="producer-row">
+            <label class="producer">
+              <input type="checkbox" name="producer">
+              <span>Is this user a producer?</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="section-label">Select Location</label>
+          <div class="grid two-col">
+            <div class="form-group">
+              <select name="location1">
+                <option>Select</option>
+                <option>Location A</option>
+                <option>Location B</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="location2">
+                <option>Select</option>
+                <option>City</option>
+                <option>Region</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-cancel">Cancel</button>
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
